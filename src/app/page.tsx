@@ -6,19 +6,13 @@ export default function Home() {
       
       {/* Full Viewport Section */}
       <div className="flex h-[calc(100vh-80px)] w-full">
-        <div className="flex-1 bg-white flex flex-col justify-end items-center pb-10">
-          <h1 className="text-5xl font-extrabold text-center text-black">Welcome to</h1>
-          <h1 className="text-5xl font-extrabold text-center text-black">The Haus</h1>
+        <div className="flex-1 bg-white flex flex-col justify-end items-left pl-15 pb-10">
+          <h1 className="text-7xl font-light text-black">WELCOME TO</h1>
+          <h1 className="text-7xl font-extrabold text-black">THE HAUS</h1>
         </div>
         <div className="flex-1 flex flex-col">
           <div className="flex-2 bg-black flex items-center justify-center h-2/3">
-            <Image 
-              src="/images/image00005.jpeg" 
-              alt="Welcome Image" 
-              width={600} 
-              height={200}
-              className="w-full h-auto object-cover"
-            />
+            <Image src="/images/image00005.jpeg" alt="Welcome Image" width={600} height={200} className="w-full h-auto object-cover"/>
           </div>
           <div className="flex-1 bg-black flex flex-col pl-24 justify-center">
             <p className="font-medium">Founders: Beti Stoyanova, Magdalena Getreuer</p>
