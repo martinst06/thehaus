@@ -2,12 +2,37 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col items-center">
+    <main className="flex-1 flex flex-col items-center bg-[var(--haus-white)]">
+      
+      {/* Full Viewport Section */}
+      <div className="flex h-[calc(100vh-80px)] w-full">
+        <div className="flex-1 bg-white flex flex-col justify-end items-center pb-10">
+          <h1 className="text-5xl font-extrabold text-center text-black">Welcome to</h1>
+          <h1 className="text-5xl font-extrabold text-center text-black">The Haus</h1>
+        </div>
+        <div className="flex-1 flex flex-col">
+          <div className="flex-2 bg-black flex items-center justify-center h-2/3">
+            <Image 
+              src="/images/image00005.jpeg" 
+              alt="Welcome Image" 
+              width={600} 
+              height={200}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="flex-1 bg-black flex flex-col pl-24 justify-center">
+            <p className="font-medium">Founders: Beti Stoyanova, Magdalena Getreuer</p>
+            <p className="font-medium">Basel, Switzerland</p>
+            <p className="font-medium">Est. 2025</p>
+          </div>
+        </div>
+      </div>
+
       {/* MISSION STATEMENT Section */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center">
-        <div className="order-2 md:order-1 px-8 py-6">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center mt-70 bg-[var(--haus-black)]">
+        <div className="order-2 md:order-1 px-8 py-6 text-white">
           <h3 className="text-2xl font-medium mb-4 border-b border-[var(--foreground)] pb-2">MISSION STATEMENT</h3>
-          <p className="text-lg font-light text-[var(--foreground)] leading-relaxed">
+          <p className="text-lg font-light leading-relaxed">
             To build a curated, elevated community and brand that redefines luxury through fashion, design, events, and social media strategy.
           </p>
         </div>
@@ -18,13 +43,13 @@ export default function Home() {
       </div>
       
       {/* VISION STATEMENT Section */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center bg-[var(--haus-black)]">
         <div className="flex items-center justify-center">
           <Image src="/images/image00005.jpeg" alt="VISION STATEMENT" width={400} height={400} className="w-full h-auto object-cover"/>
         </div>
-        <div className="px-8 py-6">
+        <div className="px-8 py-6 text-white">
           <h3 className="text-2xl font-medium mb-4 border-b border-[var(--foreground)] pb-2">VISION STATEMENT</h3>
-          <p className="text-lg font-light text-[var(--foreground)] leading-relaxed">
+          <p className="text-lg font-light leading-relaxed">
             To become a recognized leader in creating sophisticated experiences and building lasting connections within the fashion, design, and creative industries.
           </p>
         </div>
