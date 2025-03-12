@@ -36,7 +36,7 @@ export default function RootLayout({
           <header className="py-8 px-10 border-b border-gray-800 backdrop-blur-sm bg-black/80 sticky top-0 z-10">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
               <a href="/" className="hover:opacity-80 transition-opacity">
-                <h1 className="text-3xl font-bold mb-6 md:mb-0 tracking-tight">My Website</h1>
+                <h1 className="text-3xl font-bold mb-6 md:mb-0 tracking-tight">The Haus</h1>
               </a>
               
               <nav className="flex flex-wrap gap-8 text-lg">
@@ -53,7 +53,7 @@ export default function RootLayout({
           
           <footer className="py-8 px-10 border-t border-gray-800 text-center text-gray-400">
             <div className="max-w-7xl mx-auto">
-              <p>© 2023 My Website. All rights reserved.</p>
+              <p>© 2025 The Haus. All rights reserved.</p>
             </div>
           </footer>
         </div>
