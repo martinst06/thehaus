@@ -32,26 +32,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased`}>
-        <div className="min-h-screen bg-black text-white flex flex-col font-bold">
-          <header className="py-8 px-10 border-b border-gray-800 backdrop-blur-sm bg-black/80 sticky top-0 z-10">
+        <div className="min-h-screen bg-[var(--haus-black)] text-white flex flex-col font-bold">
+          <header className="py-8 px-10 border-b border-[var(--foreground)] backdrop-blur-sm bg-[var(--haus-white)] sticky top-0 z-10">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
               <a href="/" className="hover:opacity-80 transition-opacity">
-                <h1 className="text-3xl font-bold mb-6 md:mb-0 tracking-tight">The Haus</h1>
+                <h1 className="text-3xl font-bold mb-6 md:mb-0 tracking-tight text-[var(--haus-black)]">The Haus</h1>
               </a>
               
               <nav className="flex flex-wrap gap-8 text-lg">
-                <a href="/bazaar" className="hover:text-gray-300 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white hover:after:w-full after:transition-all">Bazaar</a>
-                <a href="/design" className="hover:text-gray-300 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white hover:after:w-full after:transition-all">Design</a>
-                <a href="/event" className="hover:text-gray-300 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white hover:after:w-full after:transition-all">Event</a>
-                <a href="/social" className="hover:text-gray-300 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white hover:after:w-full after:transition-all">Social</a>
-                <a href="/society" className="hover:text-gray-300 transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white hover:after:w-full after:transition-all">Society</a>
+                <a href="/bazaar" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Bazaar</a>
+                <a href="/design" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Design</a>
+                <a href="/event" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Event</a>
+                <a href="/social" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Social</a>
+                <a href="/society" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Society</a>
               </nav>
             </div>
           </header>
           
           {children}
           
-          <footer className="py-8 px-10 border-t border-gray-800 text-center text-gray-400">
+          <footer className="py-8 px-10 border-t border-[var(--foreground)] text-center text-[var(--foreground)]">
             <div className="max-w-7xl mx-auto">
               <p>© 2025 The Haus. All rights reserved.</p>
             </div>
