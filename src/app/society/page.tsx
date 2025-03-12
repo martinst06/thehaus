@@ -3,7 +3,7 @@ export default function SocietyPage() {
     <main className="flex-1 flex flex-col items-center justify-start p-12 max-w-7xl mx-auto w-full pt-32">
     <h1 className="text-5xl mb-8 font-extrabold tracking-tight">Society</h1>
     <p className="text-xl text-gray-300 max-w-2xl text-center leading-relaxed mb-12">
-        Learn about our mission, values, and the impact we're making.
+        Learn about our mission, values, and the impact we&apos;re making.
     </p>
     
     {/* Society-specific content goes here */}
