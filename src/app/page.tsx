@@ -22,9 +22,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div></div>
-
-      {/* NEW SECTION */}
+      {/* CORE VALUES SECTION */}
       <div className="w-full bg-white p-6 text-black">
         <h1 className="text-7xl font-light text-center pt-40">CORE VALUES</h1>
         <div className="flex justify-between font-thin mt-4 pt-20 pb-40 pl-15 pr-15">
@@ -61,8 +59,51 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      <div className="w-full bg-white p-6 text-black">
+        <div>
+          <h1 className="text-7xl font-light text-center pt-40">MARKET ANALYSIS</h1>
+        </div>
+        <div className="flex justify-between font-thin text-center mt-4 pt-20">
+            <div className="w-1/2">
+              <h1 className="text-3xl ml-auto mr-auto">TARGET MARKET</h1>
+              <h1 className="text-xl ml-auto mr-auto">Interior design clients looking for bespoke solutions.</h1>
+              <h1 className="text-xl ml-auto mr-auto">Interior design clients looking for bespoke solutions.</h1>
+            </div>
+            <div className="w-1/2">
+              <h1 className="text-3xl ml-auto mr-auto">COMPETITIVE ANALYSIS</h1>
+            </div>
+        </div>
+      </div>
+
+      <div className="pt-10 bg-black w-full"></div>
+
+
+      {/* MARKET ANALYSIS Section */}
+      <div className="w-full bg-white p-6 text-black">
+        <h1 className="text-7xl font-light text-center pt-40">MARKET ANALYSIS</h1>
+      </div>
+      <div className="w-full bg-white p-6 text-black">
+        <div className="flex justify-between font-thin mt-4 pt-20">
+            <h1 className="text-3xl ml-auto mr-auto">TARGET MARKET</h1>
+            <h1 className="text-3xl ml-auto mr-auto">COMPETITIVE ANALYSIS</h1>
+        </div>
+      </div>
+
+      <div className="w-full bg-white p-6 text-black">
+        <div className="flex justify-between font-thin mt-4 pt-20">
+            <h1 className="text-xl ml-auto mr-auto">Interior design clients looking for bespoke solutions.</h1>
+            <h1 className="text-xl ml-auto mr-auto">Interior design clients looking for bespoke solutions.</h1>
+        </div>
+        <div className="flex justify-between font-thin mt-4 pt-20">
+            <h1 className="text-xl ml-auto mr-auto">Interior design clients looking for bespoke solutions.</h1>
+            <h1 className="text-xl ml-auto mr-auto">Interior design clients looking for bespoke solutions.</h1>
+        </div>
+      </div>
+
+
+
+
     </main>
   );
 }
-
-{/* <h1 className="text-7xl font-light text-black">CORE VALUES</h1> */}
