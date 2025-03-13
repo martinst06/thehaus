@@ -41,11 +41,11 @@ export default function RootLayout({
               </Link>
               
               <nav className="flex flex-wrap gap-8 text-lg">
-                <a href="/bazaar" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Bazaar</a>
-                <a href="/design" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Design</a>
-                <a href="/event" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Event</a>
-                <a href="/social" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Social</a>
-                <a href="/society" className="text-[var(--haus-black)] hover:text-[var(--foreground)] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Society</a>
+                <a href="/bazaar" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Bazaar</a>
+                <a href="/design" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Design</a>
+                <a href="/event" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Event</a>
+                <a href="/social" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Social</a>
+                <a href="/society" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Society</a>
               </nav>
             </div>
           </header>
