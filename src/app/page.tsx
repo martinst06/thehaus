@@ -66,7 +66,7 @@ export default function Home() {
           <h1 className="text-7xl font-light text-center pt-20">MARKET ANALYSIS</h1>
         </div>
         <div className="flex justify-between font-thin text-center mt-4 pt-20">
-            <div className="w-1/2  pb-20">
+            <div className="w-1/2 pb-20">
               <h1 className="text-3xl ml-auto mr-auto pb-6">TARGET MARKET</h1>
               <h1 className="text-l ml-auto mr-auto pt-4 pl-10 pr-10">High-net-worth individuals and fashion enthusiasts in Basel and surrounding regions.</h1>
               <h1 className="text-l ml-auto mr-auto pt-4 pl-10 pr-10">Brands seeking luxury event planning and social media strategy.</h1>
@@ -80,7 +80,21 @@ export default function Home() {
         </div>
       </div>
 
-      
+      <div className="w-full bg-[var(--haus-black)] p-6 text-white">
+        <div className="flex justify-between font-thin mt-4">
+          <div className="w-1/2 pl-20  pt-20">
+            <h1 className="text-5xl ml-auto mr-auto pb-6">SUB</h1>
+            <h1 className="text-5xl ml-auto mr-auto pb-6">BRANDS</h1>
+          </div>
+          <div className="w-1/2 pt-14">
+            <h1 className="text-l pt-1">The Haus Bazaar: Pre-loved designer resale events.</h1>
+            <h1 className="text-l pt-1">The Haus Design: Bespoke interior design services.</h1>
+            <h1 className="text-l pt-1">The Haus Events: High-end event planning and execution.</h1>
+            <h1 className="text-l pt-1">The Haus Social: Luxury content creation and digital strategy</h1>
+            <h1 className="text-l pt-1">The Haus Society: An exclusive community with access to unique experiences.</h1>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
