@@ -18,6 +18,15 @@ export default function Navigation() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Update body class based on menu state
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("bg-dark"); // Add a class for dark background
+    } else {
+      document.body.classList.remove("bg-dark"); // Remove the class when closed
+    }
+  }, [isMenuOpen]);
+
   return (
     <>
       {/* Mobile menu button */}
@@ -81,47 +90,43 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <>
-          {/* Overlay for darkening background */}
-          <div className="fixed inset-0 bg-black opacity-50 z-5" onClick={() => setIsMenuOpen(false)}></div>
-          <nav className="md:hidden absolute top-full left-0 right-0 bg-[var(--haus-white)] border-b border-[var(--foreground)] py-4 px-6 flex flex-col gap-6 text-lg z-10">
-            <Link
-              href="/bazaar"
-              className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Bazaar
-            </Link>
-            <Link
-              href="/design"
-              className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Design
-            </Link>
-            <Link
-              href="/event"
-              className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Events
-            </Link>
-            <Link
-              href="/social"
-              className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Social
-            </Link>
-            <Link
-              href="/society"
-              className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Society
-            </Link>
-          </nav>
-        </>
+        <nav className="md:hidden absolute top-full left-0 right-0 bg-[var(--haus-white)] border-b border-[var(--foreground)] py-4 px-6 flex flex-col gap-6 text-lg z-10">
+          <Link
+            href="/bazaar"
+            className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Bazaar
+          </Link>
+          <Link
+            href="/design"
+            className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Design
+          </Link>
+          <Link
+            href="/event"
+            className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Events
+          </Link>
+          <Link
+            href="/social"
+            className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Social
+          </Link>
+          <Link
+            href="/society"
+            className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Society
+          </Link>
+        </nav>
       )}
     </>
   );

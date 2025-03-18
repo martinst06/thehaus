@@ -23,3 +23,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
+
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+}
