@@ -1,9 +1,21 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <main className="flex-1 flex flex-col items-center bg-[var(--haus-white)] m-0 p-0">
-      
+      {isMenuOpen && <div className="fixed inset-0 bg-black opacity-50 z-50" onClick={toggleMenu}></div>}
+
+      <button onClick={toggleMenu} className="md:hidden">Menu</button>
+
       {/* Full Viewport Section */}
       <div className="flex h-[calc(100vh-80px)] w-full">
         <div className="flex-1 bg-white flex flex-col justify-end items-left pl-15 pb-10">
