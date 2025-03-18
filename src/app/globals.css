@@ -1,11 +1,4 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --haus-black: #131110;
-  --haus-white: #ffffff;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

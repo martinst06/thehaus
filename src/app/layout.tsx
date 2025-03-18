@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Montserrat } from 'next/font/google';
 import "./globals.css";
 import Link from 'next/link';
+import Navigation from '../componets/Navigation';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,18 +36,12 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased`}>
         <div className="min-h-screen bg-[var(--haus-black)] text-white flex flex-col font-bold">
           <header className="py-4 px-6 md:py-8 md:px-10 border-b border-[var(--foreground)] backdrop-blur-sm bg-[var(--haus-white)] sticky top-0 z-10">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div className="max-w-7xl mx-auto flex flex-row justify-between items-center">
               <Link href="/" className="hover:opacity-80 transition-opacity">
-                <h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-0 tracking-tight text-[var(--haus-black)]">The Haus</h1>
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--haus-black)]">The Haus</h1>
               </Link>
               
-              <nav className="flex flex-col md:flex-row gap-4 md:gap-8 text-lg">
-                <Link href="/bazaar" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Bazaar</Link>
-                <Link href="/design" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Design</Link>
-                <Link href="/event" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Events</Link>
-                <Link href="/social" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Social</Link>
-                <Link href="/society" className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all">Society</Link>
-              </nav>
+              <Navigation />
             </div>
           </header>
           
