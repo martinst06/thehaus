@@ -18,15 +18,6 @@ export default function Navigation() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Update body class based on menu state
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.classList.add("bg-dark"); // Add a class for dark background
-    } else {
-      document.body.classList.remove("bg-dark"); // Remove the class when closed
-    }
-  }, [isMenuOpen]);
-
   return (
     <>
       {/* Mobile menu button */}
