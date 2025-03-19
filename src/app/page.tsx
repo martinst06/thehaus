@@ -2,6 +2,15 @@
 
 import Image from "next/image";
 import Link from 'next/link';
+import ImageCarousel from '../components/ImageCarousel';
+
+const carouselItems = [
+  { href: "/bazaar", title: "BAZAAR", image: "/images/image00005.jpeg" },
+  { href: "/design", title: "DESIGN", image: "/images/image00005.jpeg" },
+  { href: "/events", title: "EVENTS", image: "/images/image00005.jpeg" },
+  { href: "/social", title: "SOCIAL", image: "/images/image00005.jpeg" },
+  { href: "/society", title: "SOCIETY", image: "/images/image00005.jpeg" }
+];
 
 export default function Home() {
   return (

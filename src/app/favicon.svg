@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 289.71 60.26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #010101;
+        font-family: Montserrat-Bold, Montserrat;
+        font-size: 54px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.01em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 45.9)"><tspan x="0" y="0">THE H</tspan><tspan class="cls-3" x="172.15" y="0">A</tspan><tspan class="cls-2" x="212.7" y="0">US</tspan></text>
+</svg>
