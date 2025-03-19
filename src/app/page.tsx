@@ -71,19 +71,19 @@ export default function Home() {
       {/* MARKET ANALYSIS Section */}
       <div className="w-full bg-white p-2 md:p-6 text-black">
         <div>
-          <h1 className="text-5xl md:text-7xl font-light text-center pt-10 md:pt-20">MARKET ANALYSIS</h1>
+          <h1 className="text-5xl md:text-7xl font-light text-center pt-30 md:pt-20">MARKET ANALYSIS</h1>
         </div>
-        <div className="flex justify-between font-thin text-center mt-2 md:mt-4 pt-6 md:pt-20 flex-col md:flex-row items-center">
-          <div className="w-full md:w-1/2 pb-8 md:pb-20 px-5 md:px-0">
+        <div className="flex justify-between font-thin text-center p-12 mt-2 md:mt-4 pt-6 md:pt-20 flex-col md:flex-row items-center">
+          <div className="w-full md:w-1/2 pt-20 md:pb-20 px-5 md:px-0">
             <h1 className="text-2xl md:text-3xl ml-auto mr-auto pb-2 md:pb-6">TARGET MARKET</h1>
-            <h1 className="text-l ml-auto mr-auto pt-2 md:pt-4 px-4 md:px-10">High-net-worth individuals and fashion enthusiasts in Basel and surrounding regions.</h1>
-            <h1 className="text-l ml-auto mr-auto pt-2 md:pt-4 px-4 md:px-10">Brands seeking luxury event planning and social media strategy.</h1>
-            <h1 className="text-l ml-auto mr-auto pt-2 md:pt-4 px-4 md:px-10">Interior design clients looking for bespoke solutions.</h1>
+            <h1 className="text-l ml-auto mr-auto pt-6 md:pt-4 px-4 md:px-10">High-net-worth individuals and fashion enthusiasts in Basel and surrounding regions.</h1>
+            <h1 className="text-l ml-auto mr-auto pt-6 md:pt-4 px-4 md:px-10">Brands seeking luxury event planning and social media strategy.</h1>
+            <h1 className="text-l ml-auto mr-auto pt-6 md:pt-4 px-4 md:px-10">Interior design clients looking for bespoke solutions.</h1>
           </div>
-          <div className="w-full md:w-1/2 pb-8 md:pb-20 px-5 md:px-0 mt-4 md:mt-0">
+          <div className="w-full md:w-1/2 pt-20 md:pb-20 px-5 md:px-0 mt-4 md:mt-0">
             <h1 className="text-2xl md:text-3xl ml-auto mr-auto pb-2 md:pb-6">COMPETITIVE ANALYSIS</h1>
-            <h1 className="text-l ml-auto mr-auto pt-2 md:pt-4 px-4 md:px-10">Competitors: Local event planning agencies, interior designers, and fashion resale platforms.</h1>
-            <h1 className="text-l ml-auto mr-auto pt-2 md:pt-4 px-4 md:px-10">Unique Selling Proposition: A holistic approach that offers multiple services under a single, sophisticated brand.</h1>
+            <h1 className="text-l ml-auto mr-auto pt-6 md:pt-4 px-4 md:px-10">Competitors: Local event planning agencies, interior designers, and fashion resale platforms.</h1>
+            <h1 className="text-l ml-auto mr-auto pt-6 md:pt-4 px-4 md:px-10">Unique Selling Proposition: A holistic approach that offers multiple services under a single, sophisticated brand.</h1>
           </div>
         </div>
       </div>
