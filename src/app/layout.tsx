@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Montserrat } from "next/font/google";
+import { Montserrat } from 'next/font/google';
 import "./globals.css";
-import Link from "next/link";
-import Navigation from "../components/Navigation";
-import Head from "next/head";
+import Link from 'next/link';
+import Navigation from '../components/Navigation';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,10 +21,10 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
-// export const metadata: Metadata = {
-//   title: "The Haus",
-//   description: "THE HAUS is a dynamic and sophisticated brand that seamlessly blends fashion, design, and community through its diverse sub-brands",
-// };
+export const metadata: Metadata = {
+  title: "The Haus",
+  description: "THE HAUS is a dynamic and sophisticated brand that seamlessly blends fashion, design, and community through its diverse sub-brands",
+};
 
 export default function RootLayout({
   children,
@@ -34,11 +33,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <title>THE HAUS</title>
-        <meta name="description" content="Welcome to THE HAUS" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased`}>
         <div className="min-h-screen bg-[var(--haus-black)] text-white flex flex-col font-bold">
           <header className="py-4 px-6 md:py-8 md:px-10 border-b border-[var(--foreground)] backdrop-blur-sm bg-[var(--haus-white)] sticky top-0 z-10">
@@ -56,6 +50,7 @@ export default function RootLayout({
           <footer className="py-4 px-6 md:py-8 md:px-10 border-t border-[var(--foreground)] text-center text-[var(--foreground)]">
             <div className="max-w-7xl mx-auto">
               <p>© {new Date().getFullYear()} THE HAUS. All rights reserved.</p>
+
             </div>
           </footer>
         </div>
