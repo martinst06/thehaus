@@ -96,6 +96,13 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl pb-2 md:pb-6">SUB</h1>
             <h1 className="text-4xl md:text-6xl pb-6 md:pb-20 font-thin">BRANDS</h1>
           </div>
+          <div className="hidden md:block w-1/2 pt-15 font-thin">
+             <h1 className="text-l pt-1">The Haus Bazaar: Pre-loved designer resale events.</h1>
+             <h1 className="text-l pt-1">The Haus Design: Bespoke interior design services.</h1>
+             <h1 className="text-l pt-1">The Haus Events: High-end event planning and execution.</h1>
+             <h1 className="text-l pt-1">The Haus Social: Luxury content creation and digital strategy</h1>
+             <h1 className="text-l pt-1">The Haus Society: An exclusive community with access to unique experiences.</h1>
+           </div>
         </div>
 
         {/* Image Grid - Scrollable on mobile, grid on desktop */}
