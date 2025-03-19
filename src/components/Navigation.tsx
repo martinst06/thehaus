@@ -32,7 +32,7 @@ export default function Navigation() {
       overlay.style.width = '100%';
       overlay.style.height = '100%';
       overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-      overlay.style.zIndex = '10';
+      overlay.style.zIndex = '5';
       document.body.appendChild(overlay);
       
       // Add click event to close menu when overlay is clicked
@@ -120,7 +120,7 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden fixed top-[72px] left-0 right-0 bg-[var(--haus-white)] border-b border-[var(--foreground)] py-4 px-6 flex flex-col gap-6 text-lg z-20">
+        <nav className="md:hidden fixed top-[65px] left-0 right-0 bg-[var(--haus-white)] border-b border-[var(--foreground)] py-4 px-6 flex flex-col gap-6 text-lg z-20">
           <Link
             href="/bazaar"
             className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
