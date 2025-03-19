@@ -136,7 +136,7 @@ export default function Navigation() {
             Design
           </Link>
           <Link
-            href="/event"
+            href="/events"
             className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
             onClick={() => setIsMenuOpen(false)}
           >
