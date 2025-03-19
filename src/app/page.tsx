@@ -23,7 +23,7 @@ export default function Home() {
           <div className="flex-2 bg-black flex items-center justify-center h-64 md:h-96">
             <Image src="/images/image00005.jpeg" alt="Welcome Image" width={600} height={200} className="hidden md:block w-full h-auto object-cover"/>
           </div>
-          <div className="hidden flex-1 bg-black flex flex-col px-4 md:pl-24 py-6 md:py-0 justify-center md:block">
+          <div className="hidden md:block flex-1 bg-black md:flex flex-col px-4 md:pl-24 py-6 md:py-0 justify-center">
             <p className="font-medium text-white">Founders: Beti Stoyanova, Magdalena Getreuer</p>
             <p className="font-medium text-white">Basel, Switzerland</p>
             <p className="font-medium text-white">Est. 2025</p>
