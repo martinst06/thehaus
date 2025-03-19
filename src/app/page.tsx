@@ -13,7 +13,7 @@ export default function Home() {
             <Image src="/images/image00005.jpeg" alt="Welcome Image" layout="fill" objectFit="cover" className="z-0 opacity-60"/>
           </div>
           {/* Content that sits on top of the background */}
-          <div className="relative z-10">
+          <div className="relative">
             <h1 className="text-5xl md:text-7xl font-light text-white md:text-black text-center md:text-left">WELCOME TO</h1>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white md:text-black text-center md:text-left">THE HAUS</h1>
           </div>
