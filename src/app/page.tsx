@@ -73,14 +73,14 @@ export default function Home() {
         <div>
           <h1 className="text-7xl font-light text-center pt-20">MARKET ANALYSIS</h1>
         </div>
-        <div className="flex justify-between font-thin text-center mt-4 pt-20">
+        <div className="flex justify-between font-thin text-center mt-4 pt-20 flex-col md:flex-row items-center">
             <div className="w-1/2 pb-20">
               <h1 className="text-3xl ml-auto mr-auto pb-6">TARGET MARKET</h1>
               <h1 className="text-l ml-auto mr-auto pt-4 pl-10 pr-10">High-net-worth individuals and fashion enthusiasts in Basel and surrounding regions.</h1>
               <h1 className="text-l ml-auto mr-auto pt-4 pl-10 pr-10">Brands seeking luxury event planning and social media strategy.</h1>
               <h1 className="text-l ml-auto mr-auto pt-4 pl-10 pr-10">Interior design clients looking for bespoke solutions.</h1>
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 pb-20">
               <h1 className="text-3xl ml-auto mr-auto pb-6">COMPETITIVE ANALYSIS</h1>
               <h1 className="text-l ml-auto mr-auto pt-4 pl-10 pr-10">Competitors: Local event planning agencies, interior designers, and fashion resale platforms.</h1>
               <h1 className="text-l ml-auto mr-auto pt-4 pl-10 pr-10">Unique Selling Proposition: A holistic approach that offers multiple services under a single, sophisticated brand.</h1>
