@@ -7,13 +7,13 @@ export default function Home() {
     <main className="flex-1 flex flex-col items-center bg-[var(--haus-white)] m-0 p-0">
       {/* Full Viewport Section */}
       <div className="flex flex-col md:flex-row h-auto md:h-[calc(100vh-80px)] w-full overflow-hidden">
-        <div className="flex-1 bg-white flex flex-col justify-end items-left pl-4 md:pl-15 pb-10 py-8">
-          <h1 className="text-4xl md:text-7xl font-light text-black">WELCOME TO</h1>
-          <h1 className="text-4xl md:text-7xl font-extrabold text-black">THE HAUS</h1>
+        <div className="flex-1 bg-white flex flex-col justify-end items-left md:pl-15 md:pb-10 md:py-8 pb-50 py-50">
+          <h1 className="text-5xl md:text-7xl font-light text-black text-center md:text-left">WELCOME TO</h1>
+          <h1 className="text-5xl md:text-7xl font-extrabold text-black text-center md:text-left">THE HAUS</h1>
         </div>
         <div className="flex-1 flex flex-col">
           <div className="flex-2 bg-black flex items-center justify-center h-64 md:h-2/3">
-            <Image src="/images/image00005.jpeg" alt="Welcome Image" width={600} height={200} className="w-full h-auto object-cover"/>
+            <Image src="/images/image00005.jpeg" alt="Welcome Image" width={600} height={200} className="hidden md:block w-full h-auto object-cover"/>
           </div>
           <div className="flex-1 bg-black flex flex-col px-4 md:pl-24 py-6 md:py-0 justify-center">
             <p className="font-medium text-white">Founders: Beti Stoyanova, Magdalena Getreuer</p>
