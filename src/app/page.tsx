@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex-1 flex flex-col items-center bg-[var(--haus-white)] m-0 p-0">
       {/* Full Viewport Section */}
       <div className="flex flex-col md:flex-row h-auto md:h-[calc(100vh-80px)] w-full overflow-hidden">
-        <div className="flex-1 bg-white flex flex-col justify-end items-left pl-4 md:pl-15 pb-10 py-8 md:py-0">
+        <div className="flex-1 bg-white flex flex-col justify-end items-left pl-4 md:pl-15 pb-10 py-8">
           <h1 className="text-4xl md:text-7xl font-light text-black">WELCOME TO</h1>
           <h1 className="text-4xl md:text-7xl font-extrabold text-black">THE HAUS</h1>
         </div>
