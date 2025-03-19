@@ -51,18 +51,18 @@ export default function Home() {
           </p>
         </div>
         <div className="flex items-center justify-center order-1 md:order-2">
-          <Image src="/images/image00005.jpeg" alt="MISSION STATEMENT" width={400} height={400} className="w-full h-auto object-cover"/>
+          <Image src="/images/image00005.jpeg" alt="MISSION STATEMENT" width={400} height={400} className="hidden md:block w-full h-auto object-cover"/>
         </div>
       </div>
       
       {/* VISION STATEMENT Section */}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center bg-[var(--haus-black)]">
         <div className="flex items-center justify-center">
-          <Image src="/images/image00005.jpeg" alt="VISION STATEMENT" width={400} height={400} className="w-full h-auto object-cover"/>
+          <Image src="/images/image00005.jpeg" alt="VISION STATEMENT" width={400} height={400} className="hidden md:block w-full h-auto object-cover"/>
         </div>
         <div className="px-8 py-6 text-white">
-          <h3 className="text-2xl font-medium mb-4 border-b border-[var(--foreground)] pb-2">VISION STATEMENT</h3>
-          <p className="text-lg font-light leading-relaxed">
+          <h3 className="text-2xl text-right md:text-left font-medium mb-4 border-b border-[var(--foreground)] pb-2">VISION STATEMENT</h3>
+          <p className="text-lg text-right md:text-left font-light leading-relaxed">
             To become a recognized leader in creating sophisticated experiences and building lasting connections within the fashion, design, and creative industries.
           </p>
         </div>
