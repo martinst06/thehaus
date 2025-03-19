@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -100,36 +101,36 @@ export default function Home() {
         {/* Image Grid - Scrollable on mobile, grid on desktop */}
         <div className="flex flex-row md:justify-between font-thin mb-4 mt-6 md:mt-10 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
           {/* Each brand item now wrapped in anchor tags */}
-          <a href="/bazaar" className="flex flex-col min-w-[160px] md:min-w-0 mr-4 md:mr-0">
+          <Link href="/bazaar" className="flex flex-col min-w-[160px] md:min-w-0 mr-4 md:mr-0">
             <Image src="/images/image00005.jpeg" alt="Image 1" width={200} height={200} 
               className="object-cover h-40 w-40 md:h-50 md:w-50"/>
             <h1 className="text-lg md:text-xl mt-2 font-bold">THE HAUS</h1>
             <h1 className="text-xs md:text-s">BAZAAR</h1>
-          </a>
-          <a href="/design" className="flex flex-col min-w-[160px] md:min-w-0 mr-4 md:mr-0">
+          </Link>
+          <Link href="/design" className="flex flex-col min-w-[160px] md:min-w-0 mr-4 md:mr-0">
             <Image src="/images/image00005.jpeg" alt="Image 2" width={200} height={200} 
               className="object-cover h-40 w-40 md:h-50 md:w-50"/>
             <h1 className="text-lg md:text-xl mt-2 font-bold">THE HAUS</h1>
             <h1 className="text-xs md:text-s">DESIGN</h1>
-          </a>
-          <a href="/events" className="flex flex-col min-w-[160px] md:min-w-0 mr-4 md:mr-0">
+          </Link>
+          <Link href="/events" className="flex flex-col min-w-[160px] md:min-w-0 mr-4 md:mr-0">
             <Image src="/images/image00005.jpeg" alt="Image 3" width={200} height={200} 
               className="object-cover h-40 w-40 md:h-50 md:w-50"/>
             <h1 className="text-lg md:text-xl mt-2 font-bold">THE HAUS</h1>
             <h1 className="text-xs md:text-s">EVENTS</h1>
-          </a>
-          <a href="/social" className="flex flex-col min-w-[160px] md:min-w-0 mr-4 md:mr-0">
+          </Link>
+          <Link href="/social" className="flex flex-col min-w-[160px] md:min-w-0 mr-4 md:mr-0">
             <Image src="/images/image00005.jpeg" alt="Image 4" width={200} height={200} 
               className="object-cover h-40 w-40 md:h-50 md:w-50"/>
             <h1 className="text-lg md:text-xl mt-2 font-bold">THE HAUS</h1>
             <h1 className="text-xs md:text-s">SOCIAL</h1>
-          </a>
-          <a href="/society" className="flex flex-col min-w-[160px] md:min-w-0">
+          </Link>
+          <Link href="/society" className="flex flex-col min-w-[160px] md:min-w-0">
             <Image src="/images/image00005.jpeg" alt="Image 5" width={200} height={200} 
               className="object-cover h-40 w-40 md:h-50 md:w-50"/>
             <h1 className="text-lg md:text-xl mt-2 font-bold">THE HAUS</h1>
             <h1 className="text-xs md:text-s">SOCIETY</h1>
-          </a>
+          </Link>
         </div>
       </div>
     </main>
