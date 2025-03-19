@@ -18,11 +18,32 @@ export default function Navigation() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Add/remove overflow hidden to body when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
+      {/* Overlay when menu is open - moved to be first child of body */}
+      {isMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 md:hidden z-20"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
+      
       {/* Mobile menu button */}
       <button
-        className="md:hidden text-[var(--haus-black)] z-20"
+        className="md:hidden text-[var(--haus-black)] z-30"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle menu"
       >
@@ -81,7 +102,7 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden absolute top-full left-0 right-0 bg-[var(--haus-white)] border-b border-[var(--foreground)] py-4 px-6 flex flex-col gap-6 text-lg z-10">
+        <nav className="md:hidden fixed top-[72px] left-0 right-0 bg-[var(--haus-white)] border-b border-[var(--foreground)] py-4 px-6 flex flex-col gap-6 text-lg z-30">
           <Link
             href="/bazaar"
             className="text-[var(--haus-black)] relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--haus-black)] hover:after:w-full after:transition-all"
