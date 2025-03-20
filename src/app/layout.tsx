@@ -22,7 +22,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "The Haus",
+  title: "THE HAUS",
   description: "THE HAUS is a dynamic and sophisticated brand that seamlessly blends fashion, design, and community through its diverse sub-brands",
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
           <header className="py-4 px-6 md:py-8 md:px-10 border-b border-[var(--foreground)] backdrop-blur-sm bg-[var(--haus-white)] sticky top-0 z-10">
             <div className="max-w-7xl mx-auto flex flex-row justify-between items-center">
               <Link href="/" className="hover:opacity-80 transition-opacity">
-                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--haus-black)]">The Haus</h1>
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--haus-black)]">THE HAUS</h1>
               </Link>
               
               <Navigation />
