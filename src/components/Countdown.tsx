@@ -1,4 +1,3 @@
-// components/Countdown.tsx
 import React, { useState, useEffect } from 'react';
 
 interface CountdownProps {
@@ -56,28 +55,63 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, title }) => {
     // Clean up interval on unmount
     return () => clearInterval(timer);
   }, [targetDate]);
+
+  // Format digits with leading zeros
+  const formattedDays = String(timeLeft.days).padStart(1, '0');
+  const formattedHours = String(timeLeft.hours).padStart(2, '0');
+  const formattedMinutes = String(timeLeft.minutes).padStart(2, '0');
+  const formattedSeconds = String(timeLeft.seconds).padStart(2, '0');
   
   return (
     <div className="w-full bg-white text-black">
       <h2 className="text-7xl font-light text-center pt-20 md:pt-40">
-        {title || "Time until next event"}
+        {title || "BAZAAR"}
       </h2>
       
-      <div className="text-6xl md:text-8xl font-thin mt-16 mb-16 text-center tracking-wider">
-        <span>{timeLeft.days}</span>
-        <span className="mx-2">:</span>
-        <span>{String(timeLeft.hours).padStart(2, '0')}</span>
-        <span className="mx-2">:</span>
-        <span>{String(timeLeft.minutes).padStart(2, '0')}</span>
-        <span className="mx-2">:</span>
-        <span>{String(timeLeft.seconds).padStart(2, '0')}</span>
+      <div className="flex justify-center items-center mt-16 mb-16 font-thin text-center tracking-wider" style={{ fontVariantNumeric: 'tabular-nums' }}>
+        {/* Days */}
+        <div className="flex items-center">
+          <div className="text-6xl md:text-8xl min-w-20 text-center">
+            {formattedDays}
+          </div>
+        </div>
+        
+        {/* Separator */}
+        <div className="text-6xl md:text-8xl px-2">:</div>
+        
+        {/* Hours */}
+        <div className="flex items-center">
+          <div className="text-6xl md:text-8xl min-w-20 text-center">
+            {formattedHours}
+          </div>
+        </div>
+        
+        {/* Separator */}
+        <div className="text-6xl md:text-8xl px-2">:</div>
+        
+        {/* Minutes */}
+        <div className="flex items-center">
+          <div className="text-6xl md:text-8xl min-w-20 text-center">
+            {formattedMinutes}
+          </div>
+        </div>
+        
+        {/* Separator */}
+        <div className="text-6xl md:text-8xl px-2">:</div>
+        
+        {/* Seconds */}
+        <div className="flex items-center">
+          <div className="text-6xl md:text-8xl min-w-20 text-center">
+            {formattedSeconds}
+          </div>
+        </div>
       </div>
       
       <div className="flex justify-center text-sm uppercase md:text-2xl">
-        <div className="px-6 text-center">Days</div>
-        <div className="px-6 text-center">Hours</div>
-        <div className="px-6 text-center">Minutes</div>
-        <div className="px-6 text-center">Seconds</div>
+        <div className="w-20 text-center">Days</div>
+        <div className="w-20 text-center">Hours</div>
+        <div className="w-20 text-center">Minutes</div>
+        <div className="w-20 text-center">Seconds</div>
       </div>
     </div>
   );

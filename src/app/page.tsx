@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </div>
 
-    <div className="flex justify-center items-center w-full min-h-screen">
+    <div className="flex justify-center items-center w-full">
       <Countdown targetDate={targetDate} title="BAZAAR"/>
     </div>
 
