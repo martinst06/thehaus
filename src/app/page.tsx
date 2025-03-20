@@ -2,7 +2,10 @@
 
 import Image from "next/image";
 import Link from 'next/link';
-// import Countdown from "../components/Countdown";
+import Countdown from '../components/Countdown';
+
+const targetDate = new Date(2025, 2, 23, 11, 0, 0);  
+// Format: year, month (0-11), day, hour (0-23), minute, second
 
 export default function Home() {
   return (
@@ -33,9 +36,9 @@ export default function Home() {
         </div>
       </div>
 
-    {/* <div className="flex justify-center items-center min-h-screen">
-      <Countdown />
-    </div> */}
+    <div className="flex justify-center items-center w-full min-h-screen">
+      <Countdown targetDate={targetDate} title="BAZAAR"/>
+    </div>
 
       {/* CORE VALUES SECTION */}
       <div className="w-full bg-white p-6 text-black">
