@@ -37,9 +37,11 @@ export default function RootLayout({
         <div className="min-h-screen bg-[var(--haus-black)] text-white flex flex-col font-bold">
           <header className="py-4 px-6 md:py-8 md:px-10 border-b border-[var(--foreground)] bg-[var(--haus-white)] sticky top-0 z-10">
             <div className="max-w-7xl mx-auto flex flex-row justify-between items-center">
-              <Link href="/" className="hover:opacity-80 transition-opacity">
-                <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--haus-black)]">THE HAUS</h1>
-              </Link>
+              <div className="flex-grow text-center md:text-left">
+                <Link href="/" className="hover:opacity-80 transition-opacity">
+                  <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--haus-black)]">THE HAUS</h1>
+                </Link>
+              </div>
               
               <Navigation />
             </div>
