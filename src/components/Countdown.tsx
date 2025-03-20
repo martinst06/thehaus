@@ -60,7 +60,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, title }) => {
   return (
     <div className="w-full bg-white text-black">
       <h2 className="text-7xl font-light text-center pt-20 md:pt-40">
-        {title || "Time Remaining"}
+        {title || "Time until next event"}
       </h2>
       
       <div className="text-6xl md:text-8xl font-thin mt-16 mb-16 text-center tracking-wider">
