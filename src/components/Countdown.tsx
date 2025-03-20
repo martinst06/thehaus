@@ -63,42 +63,21 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, title }) => {
         {title || "Time Remaining"}
       </h2>
       
-      <div className="flex flex-row justify-between font-thin mt-4 pt-20 pb-20 md:pb-40 pl-15 pr-15">
-        <div className="p-4 w-24 md:w-32 rounded-lg bg-[var(--background)]">
-          <div className="text-3xl md:text-5xl font-bold text-white dark:text-haus-white">
-            {timeLeft.days}
-          </div>
-          <div className="text-sm uppercase mt-2 text-gray-600 dark:text-gray-300">
-            Days
-          </div>
-        </div>
-        
-        <div className="p-4 w-24 md:w-32 rounded-lg bg-[var(--background)]">
-          <div className="text-3xl md:text-5xl font-bold text-white dark:text-haus-white">
-            {timeLeft.hours.toString().padStart(2, '0')}
-          </div>
-          <div className="text-sm uppercase mt-2 text-gray-600 dark:text-gray-300">
-            Hours
-          </div>
-        </div>
-        
-        <div className="p-4 w-24 md:w-32 rounded-lg bg-[var(--background)]">
-          <div className="text-3xl md:text-5xl font-bold text-white dark:text-haus-white">
-            {timeLeft.minutes.toString().padStart(2, '0')}
-          </div>
-          <div className="text-sm uppercase mt-2 text-gray-600 dark:text-gray-300">
-            Minutes
-          </div>
-        </div>
-        
-        <div className="p-4 w-24 md:w-32 rounded-lg bg-[var(--background)]">
-          <div className="text-3xl md:text-5xl font-bold text-white dark:text-haus-white">
-            {timeLeft.seconds.toString().padStart(2, '0')}
-          </div>
-          <div className="text-sm uppercase mt-2 text-gray-600 dark:text-gray-300">
-            Seconds
-          </div>
-        </div>
+      <div className="text-6xl md:text-8xl font-thin mt-16 mb-16 text-center tracking-wider">
+        <span>{timeLeft.days}</span>
+        <span className="mx-2">:</span>
+        <span>{String(timeLeft.hours).padStart(2, '0')}</span>
+        <span className="mx-2">:</span>
+        <span>{String(timeLeft.minutes).padStart(2, '0')}</span>
+        <span className="mx-2">:</span>
+        <span>{String(timeLeft.seconds).padStart(2, '0')}</span>
+      </div>
+      
+      <div className="flex justify-center text-sm uppercase md:text-2xl">
+        <div className="px-6 text-center">Days</div>
+        <div className="px-6 text-center">Hours</div>
+        <div className="px-6 text-center">Minutes</div>
+        <div className="px-6 text-center">Seconds</div>
       </div>
     </div>
   );
