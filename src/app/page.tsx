@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from 'next/link';
+// import Countdown from "../components/Countdown";
 
 export default function Home() {
   return (
@@ -31,6 +32,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+    {/* <div className="flex justify-center items-center min-h-screen">
+      <Countdown />
+    </div> */}
 
       {/* CORE VALUES SECTION */}
       <div className="w-full bg-white p-6 text-black">
