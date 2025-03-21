@@ -37,7 +37,7 @@ export default function Home() {
       </div>
 
     <div className="flex justify-center items-center w-full">
-      <Countdown targetDate={targetDate} title="BAZAAR"/>
+      <Countdown targetDate={targetDate} title="BAZAAR" location="Volkshaus Basel"/>
     </div>
 
       {/* CORE VALUES SECTION */}

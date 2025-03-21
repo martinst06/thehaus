@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 interface CountdownProps {
   targetDate: string | Date;
   title?: string;
+  location?: string;
 }
 
 interface TimeLeft {
@@ -12,7 +13,7 @@ interface TimeLeft {
   seconds: number;
 }
 
-const Countdown: React.FC<CountdownProps> = ({ targetDate, title }) => {
+const Countdown: React.FC<CountdownProps> = ({ targetDate, title, location }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -65,7 +66,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, title }) => {
   return (
     <div className="w-full bg-white text-black">
       <h2 className="text-7xl font-light text-center pt-20 md:pt-40">
-        {title || "BAZAAR"}
+        {title || "Brands"}
       </h2>
       
       <div className="flex justify-center mt-16 mb-16" style={{ fontVariantNumeric: 'tabular-nums' }}>
@@ -105,6 +106,10 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, title }) => {
           </div>
         </div>
       </div>
+      
+      <h2 className="text-3xl font-light text-center">
+        {location || "Soon to be revealed..."}
+      </h2>
     </div>
   );
 };
