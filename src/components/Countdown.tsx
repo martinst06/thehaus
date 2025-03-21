@@ -107,7 +107,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, title, location }) =>
         </div>
       </div>
       
-      <h2 className="text-3xl font-light text-center">
+      <h2 className="text-3xl font-light text-center md:pb-32">
         {location || "Soon to be revealed..."}
       </h2>
     </div>

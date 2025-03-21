@@ -41,9 +41,9 @@ export default function Home() {
     </div>
 
       {/* CORE VALUES SECTION */}
-      <div className="w-full bg-white p-6 text-black">
-        <h1 className="text-7xl font-light text-center pt-20 md:pt-40">CORE VALUES</h1>
-        <div className="flex flex-col md:flex-row justify-between font-thin mt-4 pt-20 pb-20 md:pb-40 pl-15 pr-15">
+      <div className="w-full bg-white p-8 text-black">
+        <h1 className="text-7xl font-light text-center pt-20 md:pt-40 border-t-[1.5px] border-black">CORE VALUES</h1>
+        <div className="flex flex-col md:flex-row justify-between font-thin mt-4 pt-20 pb-20 md:pb-32 pl-15 pr-15">
           <h1 className="text-3xl text-center pb-10 md:text-left">ELEGANCE</h1>
           <h1 className="text-3xl text-center pb-10 md:text-left">COMMUNITY</h1>
           <h1 className="text-3xl text-center pb-10 md:text-left">CREATIVITY</h1>
