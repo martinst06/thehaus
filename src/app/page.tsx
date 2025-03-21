@@ -15,7 +15,7 @@ export default function Home() {
         <div className="flex-1 bg-black md:bg-white flex flex-col justify-end items-left md:pl-15 md:pb-10 md:py-8 pb-10 py-20 relative">
           {/* Mobile background image with overlay */}
           <div className="absolute inset-0 bg-black/40 md:hidden">
-            <Image src="/images/image00005.jpeg" alt="Welcome Image" layout="fill" objectFit="cover" className="z-0 opacity-60"/>
+            <Image src="/images/image00010.jpeg" alt="Welcome Image" layout="fill" objectFit="cover" className="z-0 opacity-60"/>
           </div>
           {/* Content that sits on top of the background */}
           <div className="relative">
@@ -26,7 +26,7 @@ export default function Home() {
         
         <div className="flex-1 flex flex-col">
           <div className="flex-2 bg-black flex items-center justify-center h-64 md:h-96">
-            <Image src="/images/image00005.jpeg" alt="Welcome Image" width={600} height={200} className="hidden md:block w-full h-auto object-cover"/>
+            <Image src="/images/image00010.jpeg" alt="Welcome Image" width={600} height={200} className="hidden md:block w-full h-auto object-cover"/>
           </div>
           <div className="hidden md:block flex-1 bg-black md:flex flex-col px-4 md:pl-24 py-6 md:py-0 justify-center">
             <p className="font-medium text-white">Founders: Beti Stoyanova, Magdalena Getreuer</p>
