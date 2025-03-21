@@ -4,6 +4,7 @@ import { Montserrat } from 'next/font/google';
 import "./globals.css";
 import Link from 'next/link';
 import Navigation from '../components/Navigation';
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,25 +36,24 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${montserrat.className} antialiased`}>
         <div className="min-h-screen bg-[var(--haus-black)] text-white flex flex-col font-bold">
-          <header className="py-4 px-6 md:py-8 md:px-10 border-b border-[var(--foreground)] bg-[var(--haus-white)] sticky top-0 z-10">
-            <div className="max-w-7xl mx-auto flex flex-row justify-between items-center">
-              <div className="flex-grow text-center md:text-left">
+        <header className="py-4 px-6 md:py-8 md:px-10 border-b border-[var(--foreground)] bg-[var(--haus-white)] sticky top-0 z-10">
+          <div className="max-w-7xl mx-auto flex flex-row justify-between items-center">
+            <div className="flex-grow text-center md:text-left">
+              <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--haus-black)]">
                 <Link href="/" className="hover:opacity-80 transition-opacity">
-                  <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--haus-black)]">THE HAUS</h1>
+                  THE HAUS
                 </Link>
-              </div>
-              
-              <Navigation />
+              </h1>
             </div>
-          </header>
+            
+            <Navigation />
+          </div>
+        </header>
           
           {children}
           
-          <footer className="py-4 px-6 md:py-8 md:px-10 border-t border-[var(--foreground)] text-center text-[var(--foreground)]">
-            <div className="max-w-7xl mx-auto">
-              <p>© {new Date().getFullYear()} THE HAUS. All rights reserved.</p>
-
-            </div>
+          <footer>
+            <Footer />
           </footer>
         </div>
       </body>
