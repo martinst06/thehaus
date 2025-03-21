@@ -69,7 +69,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, title, location }) =>
         {title || "Brands"}
       </h2>
       
-      <div className="flex justify-center mt-16 mb-16" style={{ fontVariantNumeric: 'tabular-nums' }}>
+      <div className="flex justify-center mt-10 mb-10 md:mt-16 md:mb-16" style={{ fontVariantNumeric: 'tabular-nums' }}>
         {/* Container for vertical alignment of each unit */}
         <div className="flex">
           {/* Days */}
