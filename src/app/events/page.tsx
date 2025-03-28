@@ -1,6 +1,13 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { createClient } from '@supabase/supabase-js';
+
+// Create Supabase client
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!, 
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 // Define event type for better type safety
 type Event = {
@@ -14,48 +21,46 @@ type Event = {
 };
 
 export default function EventPage() {
-  // Sample events data - in a real app, this would come from an API or database
-  const [events, setEvents] = useState<Event[]>([
-    {
-      id: '1',
-      title: 'Summer Showcase',
-      date: 'August 15, 2023',
-      description: 'Join us for our annual summer showcase featuring the best works from our community.',
-      location: 'Main Gallery',
-      category: 'upcoming',
-      image: '/images/summer-showcase.jpg',
-    },
-    {
-      id: '2',
-      title: 'Design Workshop',
-      date: 'September 5, 2023',
-      description: 'A hands-on workshop exploring the latest design techniques and tools.',
-      location: 'Studio B',
-      category: 'upcoming',
-    },
-    {
-      id: '3',
-      title: 'Artist Talk Series',
-      date: 'July 10, 2023',
-      description: 'An evening with renowned artists discussing their creative processes.',
-      location: 'Lecture Hall',
-      category: 'past',
-    },
-    {
-      id: '4',
-      title: 'Community Expo',
-      date: 'October 20, 2023',
-      description: 'Showcasing projects from our local creative community.',
-      location: 'Exhibition Space',
-      category: 'upcoming',
-    },
-  ]);
+  // State for events, loading, and error
+  const [events, setEvents] = useState<Event[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   // State for filtering
   const [filter, setFilter] = useState<'all' | 'upcoming' | 'past'>('all');
   
   // State for search functionality
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Fetch events from Supabase
+  useEffect(() => {
+    async function fetchEvents() {
+      try {
+        setIsLoading(true);
+        const { data, error } = await supabase
+          .from('events')
+          .select('*')
+          .order('date', { ascending: false });
+
+        if (error) throw error;
+
+        // Convert date and add category
+        const processedEvents = data.map(event => ({
+          ...event,
+          category: new Date(event.date) > new Date() ? 'upcoming' : 'past'
+        }));
+
+        setEvents(processedEvents);
+      } catch (err) {
+        console.error('Error fetching events:', err);
+        setError('Failed to load events');
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchEvents();
+  }, []);
 
   // Filter events based on category and search query
   const filteredEvents = events.filter(event => {
@@ -66,10 +71,37 @@ export default function EventPage() {
   });
 
   // Handle RSVP functionality
-  const handleRSVP = (eventId: string) => {
-    // In a real app, this would send data to a server
-    alert(`You've RSVP'd for event ${eventId}!`);
+  const handleRSVP = async (eventId: string) => {
+    try {
+      // In a real app, you'd implement proper RSVP logic
+      alert(`You've RSVP'd for event ${eventId}!`);
+      
+      // Example of how you might update RSVP in Supabase
+      // const { data, error } = await supabase
+      //   .from('event_rsvps')
+      //   .insert({ event_id: eventId, user_id: currentUser.id });
+    } catch (error) {
+      console.error('RSVP error:', error);
+    }
   };
+
+  // Render loading state
+  if (isLoading) {
+    return (
+      <main className="flex-1 flex items-center justify-center p-12">
+        <p className="text-2xl text-gray-600">Loading events...</p>
+      </main>
+    );
+  }
+
+  // Render error state
+  if (error) {
+    return (
+      <main className="flex-1 flex items-center justify-center p-12">
+        <p className="text-2xl text-red-600">{error}</p>
+      </main>
+    );
+  }
 
   return (
     <main className="flex-1 flex flex-col items-center justify-start p-12 max-w-7xl mx-auto w-full pt-32">
@@ -78,7 +110,7 @@ export default function EventPage() {
         Upcoming and past events that bring our community together.
       </p>
       
-      {/* Search and filter controls */}
+      {/* Search and filter controls (same as before) */}
       <div className="w-full max-w-3xl mb-12">
         <div className="flex flex-col md:flex-row gap-4 mb-6">
           <input
@@ -116,46 +148,6 @@ export default function EventPage() {
         {filteredEvents.length > 0 ? (
           filteredEvents.map(event => (
             <div key={event.id} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200">
-              <div className="flex flex-col md:flex-row justify-between mb-4">
-                <h3 className="text-2xl font-bold text-[var(--haus-black)]">{event.title}</h3>
-                <p className="text-gray-600">{event.date}</p>
-              </div>
-              
-              <div className="flex flex-col md:flex-row gap-8">
-                {event.image && (
-                  <div className="md:w-1/3">
-                    <div className="aspect-video bg-gray-100 rounded-md overflow-hidden">
-                      {/* In a real app, this would be an actual image */}
-                      <div className="w-full h-full flex items-center justify-center text-gray-500">
-                        Event Image
-                      </div>
-                    </div>
-                  </div>
-                )}
-                
-                <div className={event.image ? "md:w-2/3" : "w-full"}>
-                  <p className="text-[var(--haus-black)] mb-4">{event.description}</p>
-                  <p className="text-gray-600 mb-6">
-                    <span className="inline-block mr-2">📍</span> {event.location}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-4">
-                    {event.category === 'upcoming' ? (
-                      <button 
-                        className="bg-haus-black text-white px-6 py-2 rounded-md font-bold hover:bg-gray-800 transition-colors"
-                        onClick={() => handleRSVP(event.id)}
-                      >
-                        RSVP
-                      </button>
-                    ) : (
-                      <span className="bg-gray-200 text-gray-600 px-6 py-2 rounded-md">Past Event</span>
-                    )}
-                    <button className="bg-transparent border border-haus-black text-[var(--haus-black)] px-6 py-2 rounded-md font-bold hover:bg-gray-100 transition-colors">
-                      Details
-                    </button>
-                  </div>
-                </div>
-              </div>
             </div>
           ))
         ) : (
