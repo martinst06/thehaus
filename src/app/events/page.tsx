@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
+import { format } from 'date-fns';
+import { MapPin, Calendar } from 'lucide-react';
 
 // Supabase client initialization
 const supabase = createClient(
@@ -14,6 +16,7 @@ type Event = {
   id: number;
   title: string;
   date: string;
+  formattedDate: string;
   description: string;
   location: string;
   category: 'upcoming' | 'past';
@@ -40,9 +43,10 @@ export default function EventsPage() {
 
         if (error) throw error;
 
-        // Process events with category
+        // Process events with category and formatted date
         const processedEvents: Event[] = (data || []).map(event => ({
           ...event,
+          formattedDate: format(new Date(event.date), 'MMMM d, yyyy - h:mm a'),
           category: new Date(event.date) > new Date() ? 'upcoming' : 'past'
         }));
 
@@ -138,7 +142,10 @@ export default function EventsPage() {
                 <h3 className="text-2xl font-bold text-[var(--haus-black)]">
                   {event.title}
                 </h3>
-                <p className="text-gray-600">{event.date}</p>
+                <div className="flex items-center text-gray-600">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  {event.formattedDate}
+                </div>
               </div>
               
               <div className="flex flex-col md:flex-row gap-8">
@@ -158,8 +165,9 @@ export default function EventsPage() {
                   <p className="text-[var(--haus-black)] mb-4">
                     {event.description}
                   </p>
-                  <p className="text-gray-600 mb-6">
-                    <span className="inline-block mr-2">📍</span> {event.location}
+                  <p className="text-gray-600 mb-6 flex items-center">
+                    <MapPin className="mr-2 h-5 w-5" />
+                    {event.location}
                   </p>
                   
                   <div className="flex flex-wrap gap-4">

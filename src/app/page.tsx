@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import Countdown from '../components/Countdown';
 
-const targetDate = new Date(2025, 2, 23, 11, 0, 0);  
+const targetDate = new Date(2025, 3, 23, 11, 0, 0);  
 // Format: year, month (0-11), day, hour (0-23), minute, second
 
 export default function Home() {

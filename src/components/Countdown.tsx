@@ -23,7 +23,9 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate, title, location }) =>
 
   useEffect(() => {
     // Convert string date to Date object if needed
+    console.log(targetDate)
     const target = typeof targetDate === 'string' ? new Date(targetDate) : targetDate;
+    console.log(targetDate)
     
     const calculateTimeLeft = (): TimeLeft => {
       const difference = target.getTime() - new Date().getTime();
